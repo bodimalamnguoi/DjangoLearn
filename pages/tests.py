@@ -1,7 +1,7 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 
-from .views import HomePageView
+from .views import HomePageView, AboutPageView
 # Create your tests here.
 
 class HomepageTests(SimpleTestCase):
@@ -31,7 +31,7 @@ class HomepageTests(SimpleTestCase):
             HomePageView.as_view().__name__
         )
 
-        
+
 class AboutPageTests(SimpleTestCase):
 
     def setUp(self):
@@ -39,7 +39,7 @@ class AboutPageTests(SimpleTestCase):
         self.response = self.client.get(url)
 
     def test_aboutpage_status_code(self):
-        self.assertEqual(self.response, status_code, 200)
+        self.assertEqual(self.response.status_code, 200)
 
     def test_aboutpage_template(self):
         self.assertTemplateUsed(self.response, 'about.html')
