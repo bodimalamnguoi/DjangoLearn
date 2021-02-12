@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # Local
     'users.apps.UsersConfig', 
     'pages.apps.PagesConfig',
+    'books.apps.BooksConfig',
 ]
 
 # django-crispy-forms
@@ -174,3 +175,4 @@ ACCOUNT_EMAIL_REQUIRED = True # new
 ACCOUNT_UNIQUE_EMAIL = True # new
 
 DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
+
