@@ -7,7 +7,7 @@ from django.urls import reverse
 class Book(models.Model):
     id = models.UUIDField(
         primary_key=True,
-        db_index=True,
+        db_index=True, # new
         default=uuid.uuid4,
         editable=False
     )
